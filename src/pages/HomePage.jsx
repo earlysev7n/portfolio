@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
 
+const featuredTechnologies = [
+  'Flutter',
+  'Dart',
+  'Firebase',
+  'OpenAI API',
+  'React',
+  'Git',
+]
+
 function HomePage() {
   return (
     <>
@@ -137,6 +146,25 @@ function HomePage() {
             </p>
           </div>
         </div>
+      </section>
+
+          <section className="site-container technologies-section">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">Technologies</p>
+            <h2>Tools I use to build applications.</h2>
+          </div>
+
+          <Link className="section-link" to="/tech-stack">
+            View all
+          </Link>
+        </div>
+
+        <ul className="technology-cloud" aria-label="Featured technologies">
+          {featuredTechnologies.map((technology) => (
+            <li key={technology}>{technology}</li>
+          ))}
+        </ul>
       </section>
     </>
   )

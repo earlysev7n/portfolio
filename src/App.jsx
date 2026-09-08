@@ -5,6 +5,7 @@ import NotFoundPage from './pages/NotFoundPage.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
 import ExperiencePage from './pages/ExperiencePage.jsx'
 import ProjectsPage from './pages/ProjectsPage.jsx'
+import TechStackPage from './pages/TechStackPage.jsx'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="events" element={<PlaceholderPage title="Events" />} />
         <Route
           path="tech-stack"
-          element={<PlaceholderPage title="Tech Stack" />}
+          element={<TechStackPage />}
         />
         <Route
           path="certifications"
