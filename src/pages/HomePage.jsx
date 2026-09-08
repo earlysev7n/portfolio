@@ -113,6 +113,31 @@ function HomePage() {
           </div>
         </article>
       </section>
+
+      <section className="site-container experience-section">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">Experience</p>
+            <h2>My development journey.</h2>
+          </div>
+
+          <Link className="section-link" to="/experience">
+            View details
+          </Link>
+        </div>
+
+        <div className="experience-preview">
+          <p className="experience-status">Coming Soon</p>
+
+          <div className="experience-preview-content">
+            <h3>Experience details are being prepared.</h3>
+            <p>
+              This section will include my professional experience,
+              internships, and development roles.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   )
 }

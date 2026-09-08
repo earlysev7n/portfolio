@@ -3,6 +3,7 @@ import SiteLayout from './components/layout/SiteLayout.jsx'
 import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
+import ExperiencePage from './pages/ExperiencePage.jsx'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         />
         <Route
           path="experience"
-          element={<PlaceholderPage title="Experience" />}
+          element={<ExperiencePage />}
         />
         <Route path="events" element={<PlaceholderPage title="Events" />} />
         <Route
