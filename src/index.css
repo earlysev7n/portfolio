@@ -278,6 +278,112 @@ button {
   background: var(--color-muted);
 }
 
+.featured-project-section {
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.section-eyebrow,
+.project-type {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-top: var(--space-xs);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.section-link {
+  color: var(--color-muted);
+  text-underline-offset: 0.25rem;
+}
+
+.section-link:hover {
+  color: var(--color-text);
+}
+
+.featured-project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.project-preview-placeholder {
+  display: grid;
+  min-height: 28rem;
+  place-items: center;
+  background:
+    linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 15%)),
+    linear-gradient(135deg, #5138ee, #12a8a0);
+  color: #ffffff;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.featured-project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.featured-project-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.featured-project-content > p:not(.project-type) {
+  color: var(--color-muted);
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technology-list li {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-background);
+  padding: 0.25rem 0.625rem;
+  font-size: 0.875rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  margin-top: var(--space-sm);
+}
+
+.project-links a {
+  font-weight: 600;
+  text-underline-offset: 0.25rem;
+}
+
 .page-placeholder {
   display: grid;
   min-height: calc(100vh - 4rem);
@@ -314,6 +420,19 @@ button {
   .menu-toggle {
     display: inline-grid;
     margin-left: auto;
+  }
+
+   .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .featured-project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .project-preview-placeholder {
+    min-height: 18rem;
   }
 
   .navigation-panel {
