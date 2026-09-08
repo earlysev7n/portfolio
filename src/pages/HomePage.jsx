@@ -221,6 +221,26 @@ function HomePage() {
           </div>
         </article>
       </section>
+
+      <section className="site-container contact-section">
+        <div className="contact-card">
+          <p className="section-eyebrow">Contact</p>
+
+          <h2>Let&apos;s build something useful.</h2>
+
+          <p>
+            I&apos;m open to software engineering internships and collaborative
+            development opportunities.
+          </p>
+
+          <a
+            className="primary-button"
+            href="mailto:johnjerickagapito@gmail.com"
+          >
+            Get in touch
+          </a>
+        </div>
+      </section>
     </>
   )
 }

@@ -638,6 +638,56 @@ button {
   margin-top: var(--space-sm);
 }
 
+.contact-section {
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.contact-card {
+  display: grid;
+  max-width: 52rem;
+  gap: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.contact-card h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+}
+
+.contact-card p:not(.section-eyebrow) {
+  max-width: 38rem;
+  color: var(--color-muted);
+}
+
+.contact-card .primary-button {
+  width: fit-content;
+  margin-top: var(--space-sm);
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-lg);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.footer-name {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 .page-placeholder {
   display: grid;
   min-height: calc(100vh - 4rem);
@@ -674,6 +724,11 @@ button {
   .menu-toggle {
     display: inline-grid;
     margin-left: auto;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .certification-item,
