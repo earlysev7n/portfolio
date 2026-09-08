@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import certifications from '../data/certifications.js'
+import Reveal from '../components/ui/Reveal.jsx'
 
 const featuredTechnologies = [
   'Flutter',
@@ -13,7 +14,7 @@ const featuredTechnologies = [
 function HomePage() {
   return (
     <>
-      <section className="site-container home-hero">
+      <Reveal as="section" className="site-container home-hero">
         <div className="hero-content">
           <img
             className="profile-photo"
@@ -68,9 +69,9 @@ function HomePage() {
             View Resume
           </a>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="site-container featured-project-section">
+      <Reveal as="section" className="site-container featured-project-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Featured Build</p>
@@ -122,9 +123,9 @@ function HomePage() {
             </div>
           </div>
         </article>
-      </section>
+      </Reveal>
 
-      <section className="site-container experience-section">
+      <Reveal as="section" className="site-container experience-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Experience</p>
@@ -147,9 +148,9 @@ function HomePage() {
             </p>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="site-container technologies-section">
+      <Reveal as="section" className="site-container technologies-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Technologies</p>
@@ -166,9 +167,9 @@ function HomePage() {
             <li key={technology}>{technology}</li>
           ))}
         </ul>
-      </section>
+      </Reveal>
 
-      <section className="site-container certifications-section">
+      <Reveal as="section" className="site-container certifications-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Certifications</p>
@@ -194,9 +195,9 @@ function HomePage() {
             </article>
           ))}
         </div>
-      </section>
+      </Reveal>
 
-      <section className="site-container education-section">
+      <Reveal as="section" className="site-container education-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Education</p>
@@ -220,9 +221,9 @@ function HomePage() {
             </p>
           </div>
         </article>
-      </section>
+      </Reveal>
 
-      <section className="site-container contact-section">
+      <Reveal as="section" className="site-container contact-section">
         <div className="contact-card">
           <p className="section-eyebrow">Contact</p>
 
@@ -240,7 +241,7 @@ function HomePage() {
             Get in touch
           </a>
         </div>
-      </section>
+      </Reveal>
     </>
   )
 }

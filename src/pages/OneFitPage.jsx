@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Reveal from '../components/ui/Reveal.jsx'
 
 const features = [
   {
@@ -45,7 +46,7 @@ const integrations = [
 function OneFitPage() {
   return (
     <article className="site-container case-study">
-      <header className="case-study-hero">
+      <Reveal as="header" className="case-study-hero">
         <p className="section-eyebrow">Case Study · 2026</p>
         <h1>OneFit</h1>
 
@@ -69,9 +70,9 @@ function OneFitPage() {
             Back to projects
           </Link>
         </div>
-      </header>
+      </Reveal>
 
-      <section className="case-study-section">
+      <Reveal as="section" className="case-study-section">
         <div className="case-study-section-heading">
           <p className="section-eyebrow">Overview</p>
 
@@ -93,9 +94,9 @@ function OneFitPage() {
             </p>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="case-study-section">
+      <Reveal as="section" className="case-study-section">
         <div className="case-study-section-heading">
           <p className="section-eyebrow">Core Features</p>
 
@@ -112,9 +113,9 @@ function OneFitPage() {
             </div>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="case-study-section">
+      <Reveal as="section" className="case-study-section">
         <div className="case-study-section-heading">
           <p className="section-eyebrow">Algorithms</p>
 
@@ -140,9 +141,9 @@ function OneFitPage() {
             </article>
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="case-study-section">
+      <Reveal as="section" className="case-study-section">
         <div className="case-study-section-heading">
           <p className="section-eyebrow">Integrations</p>
 
@@ -155,9 +156,9 @@ function OneFitPage() {
             ))}
           </div>
         </div>
-      </section>
+      </Reveal>
 
-      <section className="case-study-section">
+      <Reveal as="section" className="case-study-section">
         <div className="case-study-cta">
           <p className="section-eyebrow">Project Repository</p>
           <h2>Explore how OneFit was built.</h2>
@@ -175,7 +176,7 @@ function OneFitPage() {
             Open GitHub repository
           </a>
         </div>
-      </section>
+      </Reveal>
     </article>
   )
 }

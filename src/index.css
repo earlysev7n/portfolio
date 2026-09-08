@@ -902,6 +902,36 @@ button {
   margin-top: var(--space-sm);
 }
 
+.route-transition {
+  animation: route-enter 300ms ease-out both;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+  transition-delay: var(--reveal-delay);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes route-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 42rem) {
   .menu-toggle {
     display: inline-grid;
@@ -996,5 +1026,14 @@ button {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .route-transition {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }
