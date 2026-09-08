@@ -6,6 +6,7 @@ import PlaceholderPage from './pages/PlaceholderPage.jsx'
 import ExperiencePage from './pages/ExperiencePage.jsx'
 import ProjectsPage from './pages/ProjectsPage.jsx'
 import TechStackPage from './pages/TechStackPage.jsx'
+import CertificationsPage from './pages/CertificationsPage.jsx'
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
         />
         <Route
           path="certifications"
-          element={<PlaceholderPage title="Certifications" />}
+          element={<CertificationsPage />}
         />
         <Route
           path="onefit"

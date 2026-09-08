@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import certifications from '../data/certifications.js'
 
 const featuredTechnologies = [
   'Flutter',
@@ -148,7 +149,7 @@ function HomePage() {
         </div>
       </section>
 
-          <section className="site-container technologies-section">
+      <section className="site-container technologies-section">
         <div className="section-heading">
           <div>
             <p className="section-eyebrow">Technologies</p>
@@ -165,6 +166,60 @@ function HomePage() {
             <li key={technology}>{technology}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="site-container certifications-section">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">Certifications</p>
+            <h2>Courses and credentials.</h2>
+          </div>
+
+          <Link className="section-link" to="/certifications">
+            View all
+          </Link>
+        </div>
+
+        <div className="certification-list">
+          {certifications.map((certification) => (
+            <article className="certification-item" key={certification.title}>
+              <p className="certification-year">{certification.year}</p>
+
+              <div>
+                <h3>{certification.title}</h3>
+                <p className="certification-issuer">
+                  {certification.issuer}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="site-container education-section">
+        <div className="section-heading">
+          <div>
+            <p className="section-eyebrow">Education</p>
+            <h2>Academic background.</h2>
+          </div>
+        </div>
+
+        <article className="education-card">
+          <p className="education-year">2022 - 2027 (Expected)</p>
+
+          <div className="education-content">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>Central Philippine University</p>
+            <p className="education-location">
+              Iloilo City, Philippines
+            </p>
+            <p className="education-coursework">
+              Relevant coursework includes Data Structures and Algorithms,
+              Software Engineering, Database Systems, and Object-Oriented
+              Programming.
+            </p>
+          </div>
+        </article>
       </section>
     </>
   )
