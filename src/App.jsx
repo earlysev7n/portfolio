@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import SiteLayout from './components/layout/SiteLayout.jsx'
 import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
-import PlaceholderPage from './pages/PlaceholderPage.jsx'
+import OneFitPage from './pages/OneFitPage.jsx'
 import ExperiencePage from './pages/ExperiencePage.jsx'
 import ProjectsPage from './pages/ProjectsPage.jsx'
 import TechStackPage from './pages/TechStackPage.jsx'
@@ -31,7 +31,7 @@ function App() {
         />
         <Route
           path="onefit"
-          element={<PlaceholderPage title="OneFit Case Study" />}
+          element={<OneFitPage />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

@@ -642,6 +642,44 @@ button {
   padding-block: clamp(4rem, 10vw, 7rem);
 }
 
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.625rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.primary-button {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: var(--color-background);
+}
+
+.primary-button:hover {
+  border-color: var(--color-muted);
+  background: var(--color-muted);
+}
+
+.secondary-button {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.secondary-button:hover {
+  border-color: var(--color-text);
+  background: var(--color-hover);
+}
+
 .contact-card {
   display: grid;
   max-width: 52rem;
@@ -688,6 +726,150 @@ button {
   font-weight: 600;
 }
 
+.case-study {
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.case-study-hero {
+  display: grid;
+  gap: var(--space-lg);
+  padding-bottom: clamp(4rem, 10vw, 7rem);
+}
+
+.case-study-hero h1 {
+  font-size: clamp(4rem, 14vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.case-study-introduction {
+  max-width: 48rem;
+  color: var(--color-muted);
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.case-study-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-xl) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-study-stats li {
+  display: grid;
+  gap: 0.25rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-md);
+}
+
+.case-study-stats strong {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.case-study-stats span {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.case-study-section {
+  padding-block: clamp(3rem, 8vw, 5rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.case-study-section-heading {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: var(--space-xl);
+}
+
+.case-study-copy {
+  display: grid;
+  max-width: 48rem;
+  gap: var(--space-md);
+}
+
+.case-study-section h2 {
+  margin-bottom: var(--space-xl);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.case-study-copy h2 {
+  margin-bottom: 0;
+}
+
+.case-study-copy p,
+.case-study-card p,
+.integration-item p,
+.case-study-cta > p:not(.section-eyebrow) {
+  color: var(--color-muted);
+}
+
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.case-study-card {
+  display: grid;
+  align-content: start;
+  gap: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: var(--space-xl);
+}
+
+.case-study-card h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.integration-list {
+  border-top: 1px solid var(--color-border);
+}
+
+.integration-item {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: var(--space-xl);
+  padding-block: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.integration-item h3 {
+  font-size: 1rem;
+}
+
+.case-study-cta {
+  display: grid;
+  max-width: 52rem;
+  gap: var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: clamp(1.5rem, 5vw, 3rem);
+}
+
+.case-study-cta h2 {
+  margin-bottom: 0;
+}
+
+.case-study-cta .primary-button {
+  width: fit-content;
+  margin-top: var(--space-sm);
+}
+
 .page-placeholder {
   display: grid;
   min-height: calc(100vh - 4rem);
@@ -724,6 +906,17 @@ button {
   .menu-toggle {
     display: inline-grid;
     margin-left: auto;
+  }
+
+  .case-study-section-heading,
+  .case-study-grid,
+  .integration-item {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-section-heading,
+  .integration-item {
+    gap: var(--space-md);
   }
 
   .footer-inner {
