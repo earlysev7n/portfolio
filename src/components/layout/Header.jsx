@@ -69,6 +69,14 @@ function Header() {
                 {item.label}
               </NavLink>
             ))}
+            <a
+              className="navigation-link"
+              href="/resume.pdf"
+              download="John-Jerick-Agapito-Resume.pdf"
+              onClick={closeNavigation}
+            >
+              Resume
+            </a>
           </nav>
 
           <button
