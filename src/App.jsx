@@ -21,7 +21,6 @@ function App() {
           path="experience"
           element={<ExperiencePage />}
         />
-        <Route path="events" element={<PlaceholderPage title="Events" />} />
         <Route
           path="tech-stack"
           element={<TechStackPage />}

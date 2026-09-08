@@ -6,7 +6,6 @@ import useTheme from '../../hooks/useTheme.js'
 const navigation = [
   { label: 'Projects', path: '/projects' },
   { label: 'Experience', path: '/experience' },
-  { label: 'Events', path: '/events' },
 ]
 
 function Header() {
@@ -69,14 +68,7 @@ function Header() {
                 {item.label}
               </NavLink>
             ))}
-            <a
-              className="navigation-link"
-              href="/resume.pdf"
-              download="John-Jerick-Agapito-Resume.pdf"
-              onClick={closeNavigation}
-            >
-              Resume
-            </a>
+            
           </nav>
 
           <button

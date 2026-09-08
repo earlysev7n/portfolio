@@ -205,7 +205,7 @@ function HomePage() {
         </div>
 
         <article className="education-card">
-          <p className="education-year">2022 - 2027 (Expected)</p>
+          <p className="education-year">2022 - 2027</p>
 
           <div className="education-content">
             <h3>Bachelor of Science in Computer Science</h3>
