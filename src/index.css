@@ -460,6 +460,62 @@ button {
   color: var(--color-muted);
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.project-card {
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.project-card-visual {
+  display: grid;
+  min-height: 18rem;
+  place-items: center;
+  background:
+    linear-gradient(rgb(0 0 0 / 15%), rgb(0 0 0 / 15%)),
+    linear-gradient(135deg, #5138ee, #12a8a0);
+  color: #ffffff;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.project-card-content {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+}
+
+.project-card-content h2,
+.project-placeholder-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.project-card-content > p:not(.project-type),
+.project-placeholder-content > p:last-child {
+  color: var(--color-muted);
+}
+
+.project-card-placeholder {
+  display: grid;
+  min-height: 100%;
+  align-content: center;
+}
+
+.project-placeholder-content {
+  display: grid;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+}
+
 .page-placeholder {
   display: grid;
   min-height: calc(100vh - 4rem);
@@ -496,6 +552,10 @@ button {
   .menu-toggle {
     display: inline-grid;
     margin-left: auto;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .experience-preview {

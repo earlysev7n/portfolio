@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import PlaceholderPage from './pages/PlaceholderPage.jsx'
 import ExperiencePage from './pages/ExperiencePage.jsx'
+import ProjectsPage from './pages/ProjectsPage.jsx'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route
           path="projects"
-          element={<PlaceholderPage title="Projects" />}
+          element={<ProjectsPage />}
         />
         <Route
           path="experience"
@@ -28,8 +29,8 @@ function App() {
           element={<PlaceholderPage title="Certifications" />}
         />
         <Route
-          path="keepr"
-          element={<PlaceholderPage title="KeepR Case Study" />}
+          path="onefit"
+          element={<PlaceholderPage title="OneFit Case Study" />}
         />
         <Route path="*" element={<NotFoundPage />} />
       </Route>

@@ -108,7 +108,7 @@ function HomePage() {
                 View source
               </a>
 
-              <Link to="/projects">Project details</Link>
+              <Link to="/onefit">Project details</Link>
             </div>
           </div>
         </article>
