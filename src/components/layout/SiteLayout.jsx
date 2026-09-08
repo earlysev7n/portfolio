@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import ChatWidget from '../chat/ChatWidget.jsx'
 
 function SiteLayout() {
   const { pathname } = useLocation()
@@ -16,6 +17,7 @@ function SiteLayout() {
       </main>
 
       <Footer />
+      <ChatWidget />
     </>
   )
 }
