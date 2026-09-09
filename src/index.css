@@ -123,7 +123,7 @@ button {
 
 .header-inner {
   display: flex;
-  max-width: 48rem;
+  max-width: 64rem;
   min-height: 4rem;
   align-items: center;
   gap: var(--space-md);
@@ -199,7 +199,7 @@ button {
 
 .home-hero {
   display: grid;
-  max-width: 48rem;
+  max-width: 64rem;
   min-height: auto;
   padding-block: 4rem 2rem;
   text-align: left;
@@ -208,6 +208,7 @@ button {
 .hero-content {
   display: grid;
   width: 100%;
+  max-width: 48rem;
   gap: 0;
 }
 
@@ -352,8 +353,8 @@ button {
 }
 
 .featured-project-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .section-heading {
@@ -459,8 +460,8 @@ button {
 }
 
 .experience-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .experience-preview {
@@ -592,8 +593,8 @@ button {
 }
 
 .technologies-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .technology-cloud {
@@ -686,8 +687,8 @@ button {
 
 .certifications-section,
 .education-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .certification-list {
@@ -749,8 +750,8 @@ button {
 }
 
 .contact-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .primary-button,
@@ -792,8 +793,8 @@ button {
 }
 
 .github-activity-section {
-  max-width: 48rem;
-  padding-block: 3rem;
+  max-width: 64rem;
+  padding-block: 2.25rem;
 }
 
 .header-inner,
@@ -805,7 +806,7 @@ button {
 .education-section,
 .github-activity-section,
 .contact-section {
-  width: min(100%, 48rem);
+  width: min(100%, 64rem);
   padding-inline: 1.5rem;
 }
 
