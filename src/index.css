@@ -680,30 +680,126 @@ button {
   background: var(--color-hover);
 }
 
-.contact-card {
-  display: grid;
-  max-width: 52rem;
-  gap: var(--space-md);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
-  padding: clamp(1.5rem, 5vw, 3rem);
+.github-activity-section {
+  padding-block: clamp(4rem, 10vw, 7rem);
 }
 
-.contact-card h2 {
+.github-activity-section > .section-eyebrow {
+  margin-bottom: var(--space-lg);
+}
+
+.github-calendar-card {
+  overflow: hidden;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-background);
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.github-calendar-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+}
+
+.github-calendar-scroll .react-activity-calendar {
+  min-width: 47rem;
+  color: var(--color-muted);
+}
+
+.github-calendar-scroll text {
+  fill: var(--color-muted);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 8vw, 6rem);
+}
+
+.contact-copy {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.contact-copy h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
   line-height: 1.05;
   letter-spacing: -0.05em;
 }
 
-.contact-card p:not(.section-eyebrow) {
-  max-width: 38rem;
+.contact-copy p {
+  max-width: 34rem;
   color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-.contact-card .primary-button {
-  width: fit-content;
-  margin-top: var(--space-sm);
+.contact-actions {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.contact-action-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-md);
+  min-height: 5.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: var(--space-md) var(--space-lg);
+  text-decoration: none;
+  box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 6%);
+  transition:
+    border-color 150ms ease,
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.contact-action-card:hover {
+  border-color: var(--color-muted);
+  background: var(--color-hover);
+  transform: translateY(-2px);
+}
+
+.contact-action-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--color-hover);
+}
+
+.contact-action-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.contact-action-content {
+  display: grid;
+  min-width: 0;
+  gap: 0.125rem;
+}
+
+.contact-action-label {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-action-value {
+  overflow-wrap: anywhere;
+  font-weight: 500;
+}
+
+.contact-action-arrow {
+  width: 1.125rem;
+  color: var(--color-muted);
 }
 
 .site-footer {
@@ -1153,6 +1249,16 @@ button {
   .menu-toggle {
     display: inline-grid;
     margin-left: auto;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: var(--space-xl);
+  }
+
+  .contact-action-card {
+    padding-inline: var(--space-md);
   }
 
   .chat-widget {

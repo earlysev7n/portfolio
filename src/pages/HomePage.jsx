@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import certifications from '../data/certifications.js'
 import Reveal from '../components/ui/Reveal.jsx'
+import { ChevronRight, Mail, Phone } from 'lucide-react'
+import { GitHubCalendar } from 'react-github-calendar'
+import 'react-github-calendar/tooltips.css'
 
 const featuredTechnologies = [
   'Flutter',
@@ -206,7 +209,7 @@ function HomePage() {
         </div>
 
         <article className="education-card">
-          <p className="education-year">2022 - 2027</p>
+          <p className="education-year">2023 - 2027</p>
 
           <div className="education-content">
             <h3>Bachelor of Science in Computer Science</h3>
@@ -223,23 +226,92 @@ function HomePage() {
         </article>
       </Reveal>
 
+      <Reveal
+        as="section"
+        className="site-container github-activity-section"
+      >
+        <p className="section-eyebrow">GitHub Activity</p>
+
+        <div className="github-calendar-card">
+          <div className="github-calendar-scroll">
+            <GitHubCalendar
+              username="earlysev7n"
+              blockSize={12}
+              blockMargin={4}
+              blockRadius={3}
+              fontSize={14}
+              theme={{
+                light: [
+                  '#ebedf0',
+                  '#aceebb',
+                  '#4ac26b',
+                  '#2da44e',
+                  '#116329',
+                ],
+                dark: [
+                  '#2a2a2a',
+                  '#0e4429',
+                  '#006d32',
+                  '#26a641',
+                  '#39d353',
+                ],
+              }}
+            />
+          </div>
+        </div>
+      </Reveal>
+
       <Reveal as="section" className="site-container contact-section">
-        <div className="contact-card">
-          <p className="section-eyebrow">Contact</p>
+        <div className="contact-layout">
+          <div className="contact-copy">
+            <h2>Let&apos;s work together.</h2>
 
-          <h2>Let&apos;s build something useful.</h2>
+            <p>
+              I&apos;m open to software engineering internships, freelance
+              projects, and collaborative development opportunities.
+            </p>
+          </div>
 
-          <p>
-            I&apos;m open to software engineering internships and collaborative
-            development opportunities.
-          </p>
+          <div className="contact-actions">
+            <a
+              className="contact-action-card"
+              href="mailto:johnjerickagapito@gmail.com"
+            >
+              <span className="contact-action-icon">
+                <Mail aria-hidden="true" />
+              </span>
 
-          <a
-            className="primary-button"
-            href="mailto:johnjerickagapito@gmail.com"
-          >
-            Get in touch
-          </a>
+              <span className="contact-action-content">
+                <span className="contact-action-label">Email</span>
+                <span className="contact-action-value">
+                  johnjerickagapito@gmail.com
+                </span>
+              </span>
+
+              <ChevronRight
+                className="contact-action-arrow"
+                aria-hidden="true"
+              />
+            </a>
+
+            <a className="contact-action-card" href="tel:+639690130374">
+              <span className="contact-action-icon">
+                <Phone aria-hidden="true" />
+              </span>
+
+              <span className="contact-action-content">
+                <span className="contact-action-label">
+                  Let&apos;s Talk
+                </span>
+                <span className="contact-action-value">+63 969 013 0374</span>
+              </span>
+
+              <ChevronRight
+                className="contact-action-arrow"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
         </div>
       </Reveal>
     </>
