@@ -1,4 +1,5 @@
 import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
 
 const technologyGroups = [
   {
@@ -59,7 +60,11 @@ function TechStackPage() {
 
       <div className="technology-groups">
         {technologyGroups.map((group) => (
-          <article className="technology-group" key={group.title}>
+          <SpotlightCard
+            as="article"
+            className="technology-group"
+            key={group.title}
+          >
             <h2>{group.title}</h2>
 
             <ul>
@@ -67,7 +72,7 @@ function TechStackPage() {
                 <TechnologyBadge key={technology} name={technology} />
               ))}
             </ul>
-          </article>
+          </SpotlightCard>
         ))}
       </div>
     </section>

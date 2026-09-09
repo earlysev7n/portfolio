@@ -1,4 +1,5 @@
 import certifications from '../data/certifications.js'
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
 
 function CertificationsPage() {
   return (
@@ -14,14 +15,18 @@ function CertificationsPage() {
 
       <div className="certification-list">
         {certifications.map((certification) => (
-          <article className="certification-item" key={certification.title}>
+          <SpotlightCard
+            as="article"
+            className="certification-item"
+            key={certification.title}
+          >
             <p className="certification-year">{certification.year}</p>
 
             <div>
               <h2>{certification.title}</h2>
               <p className="certification-issuer">{certification.issuer}</p>
             </div>
-          </article>
+          </SpotlightCard>
         ))}
       </div>
     </section>

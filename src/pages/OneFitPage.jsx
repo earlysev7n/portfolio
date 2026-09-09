@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Reveal from '../components/ui/Reveal.jsx'
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
 
 const features = [
   {
@@ -105,10 +106,14 @@ function OneFitPage() {
 
             <div className="case-study-grid">
               {features.map((feature) => (
-                <article className="case-study-card" key={feature.title}>
+                <SpotlightCard
+                  as="article"
+                  className="case-study-card"
+                  key={feature.title}
+                >
                   <h3>{feature.title}</h3>
                   <p>{feature.description}</p>
-                </article>
+                </SpotlightCard>
               ))}
             </div>
           </div>
@@ -120,7 +125,7 @@ function OneFitPage() {
           <p className="section-eyebrow">Algorithms</p>
 
           <div className="case-study-grid">
-            <article className="case-study-card">
+            <SpotlightCard as="article" className="case-study-card">
               <p className="project-type">Workout Planning</p>
               <h3>Constraint-aware greedy algorithm</h3>
               <p>
@@ -128,9 +133,9 @@ function OneFitPage() {
                 experience, available equipment, workout location, schedule,
                 and session duration.
               </p>
-            </article>
+            </SpotlightCard>
 
-            <article className="case-study-card">
+            <SpotlightCard as="article" className="case-study-card">
               <p className="project-type">Meal Planning</p>
               <h3>Genetic meal optimizer</h3>
               <p>
@@ -138,7 +143,7 @@ function OneFitPage() {
                 crossover, mutation, and elitism across 100 generations while
                 respecting nutrition and dietary requirements.
               </p>
-            </article>
+            </SpotlightCard>
           </div>
         </div>
       </Reveal>
@@ -149,17 +154,21 @@ function OneFitPage() {
 
           <div className="integration-list">
             {integrations.map((integration) => (
-              <article className="integration-item" key={integration.name}>
+              <SpotlightCard
+                as="article"
+                className="integration-item"
+                key={integration.name}
+              >
                 <h3>{integration.name}</h3>
                 <p>{integration.purpose}</p>
-              </article>
+              </SpotlightCard>
             ))}
           </div>
         </div>
       </Reveal>
 
       <Reveal as="section" className="case-study-section">
-        <div className="case-study-cta">
+        <SpotlightCard className="case-study-cta">
           <p className="section-eyebrow">Project Repository</p>
           <h2>Explore how OneFit was built.</h2>
           <p>
@@ -175,7 +184,7 @@ function OneFitPage() {
           >
             Open GitHub repository
           </a>
-        </div>
+        </SpotlightCard>
       </Reveal>
     </article>
   )

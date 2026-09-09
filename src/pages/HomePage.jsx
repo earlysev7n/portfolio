@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import certifications from '../data/certifications.js'
 import Reveal from '../components/ui/Reveal.jsx'
 import LogoLoop from '../components/ui/LogoLoop.jsx'
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
 import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
 import { ChevronRight, Mail, Phone } from 'lucide-react'
 import { GitHubCalendar } from 'react-github-calendar'
@@ -162,7 +163,7 @@ function HomePage() {
           </Link>
         </div>
 
-        <article className="featured-project-card">
+        <SpotlightCard as="article" className="featured-project-card">
           <div
             className="project-preview-placeholder"
             aria-label="OneFit project preview placeholder"
@@ -201,7 +202,7 @@ function HomePage() {
               <Link to="/onefit">Project details</Link>
             </div>
           </div>
-        </article>
+        </SpotlightCard>
       </Reveal>
 
       <Reveal as="section" className="site-container experience-section">
@@ -216,7 +217,7 @@ function HomePage() {
           </Link>
         </div>
 
-        <div className="experience-preview">
+        <SpotlightCard className="experience-preview">
           <p className="experience-status">Coming Soon</p>
 
           <div className="experience-preview-content">
@@ -226,7 +227,7 @@ function HomePage() {
               internships, and development roles.
             </p>
           </div>
-        </div>
+        </SpotlightCard>
       </Reveal>
 
       <Reveal as="section" className="site-container technologies-section">
@@ -269,7 +270,11 @@ function HomePage() {
 
         <div className="certification-list">
           {certifications.map((certification) => (
-            <article className="certification-item" key={certification.title}>
+            <SpotlightCard
+              as="article"
+              className="certification-item"
+              key={certification.title}
+            >
               <p className="certification-year">{certification.year}</p>
 
               <div>
@@ -278,7 +283,7 @@ function HomePage() {
                   {certification.issuer}
                 </p>
               </div>
-            </article>
+            </SpotlightCard>
           ))}
         </div>
       </Reveal>
@@ -291,7 +296,7 @@ function HomePage() {
           </div>
         </div>
 
-        <article className="education-card">
+        <SpotlightCard as="article" className="education-card">
           <p className="education-year">2023 - 2027</p>
 
           <div className="education-content">
@@ -306,7 +311,7 @@ function HomePage() {
               Programming.
             </p>
           </div>
-        </article>
+        </SpotlightCard>
       </Reveal>
 
       <Reveal
@@ -315,7 +320,7 @@ function HomePage() {
       >
         <p className="section-eyebrow">GitHub Activity</p>
 
-        <div className="github-calendar-card">
+        <SpotlightCard className="github-calendar-card">
           <div className="github-calendar-scroll">
             <GitHubCalendar
               colorScheme={calendarTheme}
@@ -343,7 +348,7 @@ function HomePage() {
               }}
             />
           </div>
-        </div>
+        </SpotlightCard>
       </Reveal>
 
       <Reveal as="section" className="site-container contact-section">
@@ -358,7 +363,8 @@ function HomePage() {
           </div>
 
           <div className="contact-actions">
-            <a
+            <SpotlightCard
+              as="a"
               className="contact-action-card"
               href="mailto:johnjerickagapito@gmail.com"
             >
@@ -377,9 +383,13 @@ function HomePage() {
                 className="contact-action-arrow"
                 aria-hidden="true"
               />
-            </a>
+            </SpotlightCard>
 
-            <a className="contact-action-card" href="tel:+639690130374">
+            <SpotlightCard
+              as="a"
+              className="contact-action-card"
+              href="tel:+639690130374"
+            >
               <span className="contact-action-icon">
                 <Phone aria-hidden="true" />
               </span>
@@ -395,7 +405,7 @@ function HomePage() {
                 className="contact-action-arrow"
                 aria-hidden="true"
               />
-            </a>
+            </SpotlightCard>
           </div>
         </div>
       </Reveal>

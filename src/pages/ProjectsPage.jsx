@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
 
 function ProjectsPage() {
   return (
@@ -13,7 +14,7 @@ function ProjectsPage() {
       </header>
 
       <div className="projects-grid">
-        <article className="project-card">
+        <SpotlightCard as="article" className="project-card">
           <div
             className="project-card-visual"
             aria-label="OneFit project preview placeholder"
@@ -51,9 +52,12 @@ function ProjectsPage() {
               <Link to="/onefit">View case study</Link>
             </div>
           </div>
-        </article>
+        </SpotlightCard>
 
-        <article className="project-card project-card-placeholder">
+        <SpotlightCard
+          as="article"
+          className="project-card project-card-placeholder"
+        >
           <div className="project-placeholder-content">
             <p className="section-eyebrow">Coming Soon</p>
             <h2>More projects are on the way.</h2>
@@ -62,7 +66,7 @@ function ProjectsPage() {
               are completed.
             </p>
           </div>
-        </article>
+        </SpotlightCard>
       </div>
     </section>
   )

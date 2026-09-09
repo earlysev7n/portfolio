@@ -7,6 +7,7 @@
   --color-accent: #f5f5f5;
   --color-hover: #222222;
   --color-header: rgb(13 13 13 / 70%);
+  --card-spotlight-color: rgb(255 255 255 / 12%);
 
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -41,6 +42,7 @@
   --color-accent: #171717;
   --color-hover: #eeeeee;
   --color-header: rgb(255 255 255 / 70%);
+  --card-spotlight-color: rgb(23 23 23 / 8%);
 
   color-scheme: light;
 }

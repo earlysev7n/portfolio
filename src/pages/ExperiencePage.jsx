@@ -1,3 +1,5 @@
+import SpotlightCard from '../components/ui/SpotlightCard.jsx'
+
 function ExperiencePage() {
   return (
     <section className="site-container page-section">
@@ -10,14 +12,14 @@ function ExperiencePage() {
         </p>
       </header>
 
-      <div className="coming-soon-card">
+      <SpotlightCard className="coming-soon-card">
         <p className="section-eyebrow">Coming Soon</p>
         <h2>Experience details are being prepared.</h2>
         <p>
           I&apos;ll update this page as I gain professional and internship
           experience.
         </p>
-      </div>
+      </SpotlightCard>
     </section>
   )
 }
