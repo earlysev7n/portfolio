@@ -320,10 +320,11 @@ function HomePage() {
             <GitHubCalendar
               colorScheme={calendarTheme}
               username="earlysev7n"
-              blockSize={12}
-              blockMargin={4}
-              blockRadius={3}
-              fontSize={14}
+              year={new Date().getFullYear()}
+              blockSize={10}
+              blockMargin={3}
+              blockRadius={2}
+              fontSize={12}
               theme={{
                 light: [
                   '#f1f3f5',

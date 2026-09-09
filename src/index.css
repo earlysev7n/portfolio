@@ -822,13 +822,25 @@ button {
 }
 
 .github-calendar-scroll {
-  overflow-x: auto;
-  padding-bottom: 0.25rem;
+  overflow: hidden;
 }
 
 .github-calendar-scroll .react-activity-calendar {
-  min-width: 47rem;
+  width: 100% !important;
+  min-width: 0;
   color: var(--color-muted);
+}
+
+.github-calendar-scroll
+  .react-activity-calendar__scroll-container {
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.github-calendar-scroll
+  .react-activity-calendar__calendar {
+  width: 100%;
+  height: auto;
 }
 
 .github-calendar-scroll text {
