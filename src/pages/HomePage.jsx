@@ -5,6 +5,7 @@ import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
 import { ChevronRight, Mail, Phone } from 'lucide-react'
 import { GitHubCalendar } from 'react-github-calendar'
 import 'react-github-calendar/tooltips.css'
+import { siGithub } from 'simple-icons'
 import { useEffect, useState } from 'react'
 
 const featuredTechnologies = [
@@ -60,58 +61,77 @@ function HomePage() {
     <>
       <Reveal as="section" className="site-container home-hero">
         <div className="hero-content">
-          <img
-            className="profile-photo"
-            src="/images/profile.jpg"
-            alt="Temporary profile placeholder"
-          />
+          <div className="hero-identity">
+            <img
+              className="profile-photo"
+              src="/images/profile.jpg"
+              alt="Temporary profile placeholder"
+            />
 
-          <h1>John Jerick Agapito</h1>
+            <div className="hero-identity-copy">
+              <h1>John Jerick Agapito</h1>
 
-          <div className="hero-socials" aria-label="Social links">
-            <a
-              className="hero-social-link"
-              href="https://github.com/earlysev7n"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+              <div className="hero-socials" aria-label="Social links">
+                <a
+                  className="hero-social-link"
+                  href="https://github.com/earlysev7n"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d={siGithub.path} />
+                  </svg>
+                </a>
 
-            <a
-              className="hero-social-link"
-              href="https://linkedin.com/in/john-jerick-agapito-30651a337"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
+                <a
+                  className="hero-social-link"
+                  href="https://linkedin.com/in/john-jerick-agapito-30651a337"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
+                  <span className="hero-linkedin-mark" aria-hidden="true">
+                    in
+                  </span>
+                </a>
 
-            <a
-              className="hero-social-link"
-              href="mailto:johnjerickagapito@gmail.com"
-            >
-              Email
-            </a>
+                <a
+                  className="hero-social-link"
+                  href="mailto:johnjerickagapito@gmail.com"
+                  aria-label="Email"
+                >
+                  <Mail aria-hidden="true" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          <h2>Software Developer — Flutter, Firebase & AI Integrations</h2>
+          <div className="hero-copy">
+            <h2>
+              Software Developer{' '}
+              <span className="hero-title-muted">
+                — Flutter, Firebase &amp; AI Integrations
+              </span>
+            </h2>
 
-          <p className="hero-description">
-            I&apos;m a Computer Science undergraduate who builds practical
-            cross-platform applications with Flutter and Firebase. I&apos;m
-            currently leading OneFit, a fitness and nutrition recommendation
-            system using optimization algorithms and the OpenAI API.
-          </p>
+            <p className="hero-description">
+              I&apos;m a Computer Science undergraduate who builds practical
+              cross-platform applications with Flutter and Firebase. I&apos;m
+              currently leading OneFit, a fitness and nutrition recommendation
+              system using optimization algorithms and the OpenAI API.
+            </p>
 
-          <a
-            className="resume-button"
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Resume
-          </a>
+            <a
+              className="resume-button"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>View Resume</span>
+              <ChevronRight aria-hidden="true" />
+            </a>
+          </div>
         </div>
       </Reveal>
 
