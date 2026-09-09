@@ -4,6 +4,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import { ChevronRight, Mail, Phone } from 'lucide-react'
 import { GitHubCalendar } from 'react-github-calendar'
 import 'react-github-calendar/tooltips.css'
+import { useEffect, useState } from 'react'
 
 const featuredTechnologies = [
   'Flutter',
@@ -14,7 +15,46 @@ const featuredTechnologies = [
   'Git',
 ]
 
+function getInitialCalendarTheme() {
+  const pageTheme = document.documentElement.dataset.theme
+
+  if (pageTheme === 'light' || pageTheme === 'dark') {
+    return pageTheme
+  }
+
+  const savedTheme = localStorage.getItem('portfolio-theme')
+
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    return savedTheme
+  }
+
+  return window.matchMedia('(prefers-color-scheme: light)').matches
+    ? 'light'
+    : 'dark'
+}
+
 function HomePage() {
+  const [calendarTheme, setCalendarTheme] = useState(
+    getInitialCalendarTheme,
+  )
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      const theme = document.documentElement.dataset.theme
+
+      if (theme === 'light' || theme === 'dark') {
+        setCalendarTheme(theme)
+      }
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <>
       <Reveal as="section" className="site-container home-hero">
@@ -235,6 +275,7 @@ function HomePage() {
         <div className="github-calendar-card">
           <div className="github-calendar-scroll">
             <GitHubCalendar
+              colorScheme={calendarTheme}
               username="earlysev7n"
               blockSize={12}
               blockMargin={4}
@@ -242,11 +283,11 @@ function HomePage() {
               fontSize={14}
               theme={{
                 light: [
-                  '#ebedf0',
-                  '#aceebb',
-                  '#4ac26b',
-                  '#2da44e',
-                  '#116329',
+                  '#f1f3f5',
+                  '#c6f6d5',
+                  '#86efac',
+                  '#4ade80',
+                  '#16a34a',
                 ],
                 dark: [
                   '#2a2a2a',
