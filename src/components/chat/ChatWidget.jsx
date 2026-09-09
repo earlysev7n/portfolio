@@ -85,13 +85,23 @@ function ChatWidget() {
           aria-label="Portfolio assistant"
         >
           <header className="chat-header">
-            <div>
-              <p className="chat-title">
-                Portfolio Assistant
-              </p>
-              <p className="chat-status">
-                Quick answers about John
-              </p>
+            <div className="chat-agent">
+              <span className="chat-avatar">
+                <img
+                  src="/images/lebron-chat.jpg"
+                  alt="Lebron James"
+                />
+                <span className="chat-presence" aria-hidden="true" />
+              </span>
+
+              <div>
+                <p className="chat-title">
+                  Lebron James
+                </p>
+                <p className="chat-status">
+                  Portfolio assistant
+                </p>
+              </div>
             </div>
 
             <button
