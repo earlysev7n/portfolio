@@ -66,6 +66,7 @@ p {
 body {
   min-width: 20rem;
   min-height: 100vh;
+  overflow-x: hidden;
   background: var(--color-background);
   color: var(--color-text);
   line-height: 1.6;
@@ -182,10 +183,6 @@ button {
 .icon-button svg {
   width: 1.125rem;
   height: 1.125rem;
-}
-
-.menu-toggle {
-  display: none;
 }
 
 .home-hero {
@@ -1283,9 +1280,89 @@ button {
 }
 
 @media (max-width: 42rem) {
-  .menu-toggle {
-    display: inline-grid;
-    margin-left: auto;
+  .header-inner {
+    min-height: 3.25rem;
+    gap: 0.35rem;
+  }
+
+  .navigation-panel {
+    min-width: 0;
+    gap: 0.25rem;
+  }
+
+  .site-navigation {
+    min-width: 0;
+    gap: 0;
+  }
+
+  .navigation-link {
+    padding: 0.25rem 0.35rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .theme-toggle {
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+  }
+
+  .home-hero {
+    min-height: auto;
+    padding-block: 2.5rem 2rem;
+  }
+
+  .hero-content {
+    gap: 0.75rem;
+  }
+
+  .profile-photo {
+    width: 6rem;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(2.25rem, 11vw, 3.5rem);
+  }
+
+  .home-hero h2 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .hero-description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  .resume-button {
+    margin-top: 0.25rem;
+  }
+
+  .featured-project-section,
+  .experience-section,
+  .technologies-section,
+  .certifications-section,
+  .education-section,
+  .github-activity-section,
+  .contact-section {
+    padding-block: 3rem;
+  }
+
+  .section-heading {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-preview-placeholder {
+    min-height: 14rem;
+  }
+
+  .featured-project-content {
+    padding: 1.25rem;
+  }
+
+  .github-calendar-card {
+    padding: 1rem;
   }
 
   .contact-layout {
@@ -1351,36 +1428,6 @@ button {
     min-height: 18rem;
   }
 
-  .navigation-panel {
-    position: absolute;
-    top: calc(100% + 1px);
-    right: 0;
-    left: 0;
-    display: none;
-    align-items: stretch;
-    margin-left: 0;
-    padding: var(--space-md);
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-background);
-  }
-
-  .navigation-panel.is-open {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .site-navigation {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .navigation-link {
-    padding: var(--space-sm);
-  }
-
-  .theme-toggle {
-    width: 100%;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
