@@ -1,3 +1,5 @@
+import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
+
 const technologyGroups = [
   {
     title: 'Languages',
@@ -62,7 +64,7 @@ function TechStackPage() {
 
             <ul>
               {group.technologies.map((technology) => (
-                <li key={technology}>{technology}</li>
+                <TechnologyBadge key={technology} name={technology} />
               ))}
             </ul>
           </article>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import certifications from '../data/certifications.js'
 import Reveal from '../components/ui/Reveal.jsx'
+import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
 import { ChevronRight, Mail, Phone } from 'lucide-react'
 import { GitHubCalendar } from 'react-github-calendar'
 import 'react-github-calendar/tooltips.css'
@@ -207,7 +208,7 @@ function HomePage() {
 
         <ul className="technology-cloud" aria-label="Featured technologies">
           {featuredTechnologies.map((technology) => (
-            <li key={technology}>{technology}</li>
+            <TechnologyBadge key={technology} name={technology} />
           ))}
         </ul>
       </Reveal>
