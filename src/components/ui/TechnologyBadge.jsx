@@ -68,12 +68,12 @@ const genericIcons = {
   'Visual Studio Code': Code2,
 }
 
-function TechnologyBadge({ name }) {
+function TechnologyBadge({ name, as: Component = 'li' }) {
   const brandIcon = brandIcons[name]
   const GenericIcon = genericIcons[name] ?? Code2
 
   return (
-    <li className="technology-badge">
+    <Component className="technology-badge">
       <span
         className="technology-badge-icon"
         style={brandIcon ? { color: `#${brandIcon.hex}` } : undefined}
@@ -96,7 +96,7 @@ function TechnologyBadge({ name }) {
       </span>
 
       <span>{name}</span>
-    </li>
+    </Component>
   )
 }
 

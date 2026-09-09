@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import certifications from '../data/certifications.js'
 import Reveal from '../components/ui/Reveal.jsx'
+import LogoLoop from '../components/ui/LogoLoop.jsx'
 import TechnologyBadge from '../components/ui/TechnologyBadge.jsx'
 import { ChevronRight, Mail, Phone } from 'lucide-react'
 import { GitHubCalendar } from 'react-github-calendar'
@@ -15,7 +16,21 @@ const featuredTechnologies = [
   'OpenAI API',
   'React',
   'Git',
+  'Python',
+  'JavaScript',
+  'SQL',
+  'Cloud Firestore',
+  'MySQL',
+  'REST APIs',
+  'GitHub',
+  'Visual Studio Code',
+  'Vite',
 ]
+
+const technologyLogos = featuredTechnologies.map((technology) => ({
+  node: <TechnologyBadge as="span" name={technology} />,
+  title: technology,
+}))
 
 function getInitialCalendarTheme() {
   const pageTheme = document.documentElement.dataset.theme
@@ -226,11 +241,18 @@ function HomePage() {
           </Link>
         </div>
 
-        <ul className="technology-cloud" aria-label="Featured technologies">
-          {featuredTechnologies.map((technology) => (
-            <TechnologyBadge key={technology} name={technology} />
-          ))}
-        </ul>
+        <div className="technology-cloud">
+          <LogoLoop
+            logos={technologyLogos}
+            speed={45}
+            logoHeight={38}
+            gap={12}
+            hoverSpeed={0}
+            fadeOut
+            scaleOnHover
+            ariaLabel="Tools and technologies I use"
+          />
+        </div>
       </Reveal>
 
       <Reveal as="section" className="site-container certifications-section">

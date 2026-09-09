@@ -1,0 +1,80 @@
+.logoloop {
+  --logoloop-gap: 2rem;
+  --logoloop-logo-height: 1.75rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logoloop--scale-hover {
+  padding-block: calc(var(--logoloop-logo-height) * 0.1);
+}
+
+.logoloop__track,
+.logoloop__list {
+  display: flex;
+  align-items: center;
+}
+
+.logoloop__track {
+  width: max-content;
+  will-change: transform;
+  user-select: none;
+}
+
+.logoloop__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logoloop__item {
+  flex: 0 0 auto;
+  margin-right: var(--logoloop-gap);
+  line-height: 1;
+}
+
+.logoloop__node {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 200ms ease;
+}
+
+.logoloop--scale-hover .logoloop__item:hover .logoloop__node {
+  transform: scale(1.04);
+}
+
+.logoloop--fade::before,
+.logoloop--fade::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: clamp(1.5rem, 8%, 4rem);
+  content: '';
+  pointer-events: none;
+}
+
+.logoloop--fade::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-background), transparent);
+}
+
+.logoloop--fade::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-background), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoloop {
+    overflow-x: auto;
+  }
+
+  .logoloop__track {
+    transform: none !important;
+  }
+
+  .logoloop__list:not(:first-child) {
+    display: none;
+  }
+}

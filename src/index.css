@@ -186,6 +186,17 @@ button {
   height: 1.125rem;
 }
 
+.theme-toggle {
+  border-color: transparent;
+  background: transparent;
+  color: var(--color-muted);
+}
+
+.theme-toggle:hover {
+  background: var(--color-hover);
+  color: var(--color-text);
+}
+
 .home-hero {
   display: grid;
   max-width: 48rem;
@@ -586,14 +597,10 @@ button {
 }
 
 .technology-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin: 0;
+  overflow: hidden;
   padding: var(--space-xl) 0;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  list-style: none;
 }
 
 .technology-badge {
